@@ -38,11 +38,7 @@ AOP_Obj=ImpactingObjects{index}.astUpOut(5); %Argument of Periapsis [Rad]
 T_Obj=2*pi*sqrt(a_Obj^3/mu_Sun); %Period [s]
 f0_Obj=ImpactingObjects{index}.astUpOut(6);
 
-%[r0_Obj, v0_Obj]=IC_from_KEP(a_Obj, e_Obj, i_Obj, RAAN_Obj, AOP_Obj, f0_Obj);
-
-out = kep2car([a_Obj e_Obj i_Obj RAAN_Obj AOP_Obj f0_Obj],mu_Sun);
-r0_Obj=out(1:3);
-v0_Obj=out(4:6);
+[r0_Obj, v0_Obj]=IC_from_KEP(a_Obj, e_Obj, i_Obj, RAAN_Obj, AOP_Obj, f0_Obj);
 
 [r_Obj, v_Obj]=PropOrb_Sun(r0_Obj, v0_Obj, t_b); % Backwards propagation
 r0_Obj=r_Obj(N,:); % We only want the last value
