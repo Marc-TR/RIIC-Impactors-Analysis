@@ -99,7 +99,7 @@ for index=1:ON
             
             Epsilon=acos(dot(r_L1O(i,:),(-r_L1(i,:)))/(norm(r_L1O(i,:))*norm(r_L1(i,:))));
             
-            if V_70m_2d(i,index)<=Lim_V && Epsilon>40*(pi/180) % Limiting magnitude and Sun exclusion angle
+            if V_70m_2d(i,index)<=Lim_V && Epsilon>50*(pi/180) % Limiting magnitude and Sun exclusion angle
                 t_Obs20m_Vlim17(index)=t(N2)-t(i); % Time since the object is observable until impact
                 
                 % Save the position in a non inertial reference frame
@@ -170,7 +170,7 @@ for index2=(ON+1):ON2
             
             Epsilon=acos(dot(r_L1O(i,:),(-r_L1(i,:)))/(norm(r_L1O(i,:))*norm(r_L1(i,:))));
                         
-            if V_70m_2d(i,index2)<=Lim_V && Epsilon>40*(pi/180) % Limiting magnitude and Sun exclusion angle
+            if V_70m_2d(i,index2)<=Lim_V && Epsilon>50*(pi/180) % Limiting magnitude and Sun exclusion angle
                 t_Obs20m_Vlim17(index2)=t(N2)-t(i); % Time since the object is observable until impact
                 
                 % Save the position in a non inertial reference frame
