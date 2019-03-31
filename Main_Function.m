@@ -1,4 +1,4 @@
-%% Velocity and apparent motion from L1 of 17.518 objects that impact the Earth with Earth Perturbation
+%% Monte Carlo to extract data of impactors from L1 of 17.518 objects that impact the Earth with Earth Perturbation
 % The propagation stops when the object impacts the Earth
 
 clear all; clc; close all;
